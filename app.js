@@ -17,8 +17,8 @@ button1.addEventListener("click", function(){
     p1Score+=1;
         if(p1Score===winningScore){
             gameIsOver=true;
-            p1.classList.add('winner');
-            p2.classList.add('loser');
+            p1.classList.add('has-text-success');
+            p2.classList.add('has-text-danger');
         }    
         p1.textContent = p1Score;
     }
@@ -30,8 +30,8 @@ button2.addEventListener("click", function(){
         
             if(p2Score===winningScore){
                 gameIsOver=true;
-                p2.classList.add('winner');
-                p1.classList.add('loser');
+                p2.classList.add('has-text-success');
+                p1.classList.add('has-text-danger');
             }    
             p2.textContent = p2Score;
         }
@@ -50,8 +50,8 @@ function reset(){
     p2Score=0;
     p1.textContent=p1Score;
     p2.textContent=p2Score;
-    p1.classList.remove('winner','loser');
-    p2.classList.remove('winner','loser');
+    p1.classList.remove('has-text-success','has-text-danger');
+    p2.classList.remove('has-text-success','has-text-danger');
 
 }
 
